@@ -63,12 +63,18 @@
         setTimeout(returnToBeans, 1000);
     }
 
-    function makeCoffee() {
+    function makeCoffee(drinkType) {
+        var drinksOrdered = [];
         myImage.setAttribute('src', 'static/coffee_machine.jpg');
+
+        drinksOrdered.push(drinkType);
+
+        console.log(drinksOrdered);
+
         setTimeout(pourInMug, 1000);
 
     }
-    myImage.addEventListener('click', makeCoffee);
+    myImage.addEventListener('click', function () { return makeCoffee('brew'); });
 
     
 
