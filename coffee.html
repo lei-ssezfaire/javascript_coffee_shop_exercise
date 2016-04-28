@@ -52,18 +52,30 @@
 
     myImage.setAttribute('src', 'static/coffee_beans.jpg');
 
-    function makeCoffee() {
-        myImage.setAttribute('src', 'static/coffee_machine.jpg');
-
-    }
+   
 
     function returnToBeans() {
         myImage.setAttribute('src', 'static/coffee_beans.jpg');
     }
 
+    function pourInMug() {
+        myImage.setAttribute('src', 'static/coffee_mug.jpg');
+        setTimeout(returnToBeans, 1000);
+    }
+
+    function makeCoffee() {
+        myImage.setAttribute('src', 'static/coffee_machine.jpg');
+        setTimeout(pourInMug, 1000);
+
+    }
     myImage.addEventListener('click', makeCoffee);
 
-    setInterval(returnToBeans, 1000);
+    
+
+    
+
+
+    // setInterval(makeCoffee, 1000);
 
     // use this JavaScript object in further study step
 
