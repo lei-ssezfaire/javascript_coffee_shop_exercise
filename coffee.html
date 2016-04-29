@@ -16,7 +16,7 @@
         <h1>Coffee Shop</h1>
         <br>
 
-        <img id="coffee-image" src="LOLWUT" alt="make this image work with js" height="300" width="200">
+        <img id="coffee_image" src="static/coffee_beans.jpg" alt="make this image work" height="300" width="200">
 
         <h3 id="message">Click The Image To Order Coffee</h3>
 
@@ -43,57 +43,9 @@
     </div>
 </div>
 
-<script>
+<script src="https://code.jquery.com/jquery.js"></script>
 
-    // Set these variables to their DOM elements
-
-    var myImage = document.getElementById('coffee-image');
-    var myRevenueMessage = document.getElementById('revenue');
-
-    myImage.setAttribute('src', 'static/coffee_beans.jpg');
-
-   
-
-    function returnToBeans() {
-        myImage.setAttribute('src', 'static/coffee_beans.jpg');
-    }
-
-    function pourInMug() {
-        myImage.setAttribute('src', 'static/coffee_mug.jpg');
-        setTimeout(returnToBeans, 1000);
-    }
-
-    function makeCoffee(drinkType) {
-        var drinksOrdered = [];
-        myImage.setAttribute('src', 'static/coffee_machine.jpg');
-
-        drinksOrdered.push(drinkType);
-
-        console.log(drinksOrdered);
-
-        setTimeout(pourInMug, 1000);
-
-    }
-    myImage.addEventListener('click', function () { return makeCoffee('brew'); });
-
-    
-
-    
-
-
-    // setInterval(makeCoffee, 1000);
-
-    // use this JavaScript object in further study step
-
-    var prices = {
-        "brew": 2.05,
-        "espresso": 3.25,
-        "latte": 4.15,
-        "hot chocolate": 2.50
-    };
-
-
-</script>
+<script src="./jquery.js"></script>
 
 </body>
 </html>
